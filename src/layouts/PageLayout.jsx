@@ -34,25 +34,11 @@ function PageLayout({ children }) {
     <StaticQuery query={query}>
       {data => {
         const models = data.allBuilderModels;
-        const header = models.header[0].content;
-        const footer = models.footer[0].content;
         return (
           <div className={classes.root}>
-            <div className={classes.header}>
-              <BuilderComponent
-                renderLink={Link}
-                name="header"
-                content={header}
-              />
-            </div>
+
             <div className={classes.content}>{children}</div>
-            <div className={classes.footer}>
-              <BuilderComponent
-                renderLink={Link}
-                name="footer"
-                content={footer}
-              />
-            </div>
+
           </div>
         );
       }}
