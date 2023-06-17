@@ -18,6 +18,17 @@ module.exports = {
         // },
       }
     },
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: [
+          "G-K450RT0W2K", 
+        ],
+        pluginConfig: {
+          head: true,
+        },
+      },
+    },
     // If you want to use styled components you should add the plugin here.
     // 'gatsby-plugin-styled-components',
     'gatsby-plugin-react-helmet',
